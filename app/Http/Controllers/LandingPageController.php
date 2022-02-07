@@ -8,6 +8,13 @@ class LandingPageController extends Controller
 {
     public function landing()
     {
-        return view('LandingPage');
+        return view('landingpage.index');
+
+    }
+
+    public function information()
+    {
+        return view('landingpage.information_detail');
+
     }
 }

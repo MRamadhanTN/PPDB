@@ -13,7 +13,7 @@ class DAController extends Controller
      */
     public function index()
     {
-        return view('layout.dashboard_admin');
+        return view('pages.admin.DashboardAdmin');
     }
 
     /**

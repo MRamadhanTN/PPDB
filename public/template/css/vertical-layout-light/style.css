@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------
  [Master Stylesheet]
 
-  Project:	Star Admin2 
+  Project:	Star Admin2
   Version:	1.2.1
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
@@ -13763,7 +13763,7 @@ fieldset:disabled .swal2-modal .swal2-buttonswrapper .swal2-styled,
 
 .list-group-item.active {
   z-index: 2;
-  color: #fff;
+  color: rgb(160, 149, 149);
   background-color: #0d6efd;
   border-color: #0d6efd;
 }

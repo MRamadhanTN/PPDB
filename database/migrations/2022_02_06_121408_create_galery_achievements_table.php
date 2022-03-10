@@ -15,6 +15,10 @@ class CreateGaleryAchievementsTable extends Migration
     {
         Schema::create('galery_achievements', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
+            $table->foreignId('achievement_siswa_id');
+
+            $table->softDeletes();
             $table->timestamps();
         });
     }

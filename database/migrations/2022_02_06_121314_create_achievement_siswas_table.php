@@ -15,6 +15,12 @@ class CreateAchievementSiswasTable extends Migration
     {
         Schema::create('achievement_siswas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('student_id');
+            $table->foreignId('stage_id');
+            $table->foreignId('academy_year_id');
+            $table->text('content');
+
+            $table->softDeletes();
             $table->timestamps();
         });
     }

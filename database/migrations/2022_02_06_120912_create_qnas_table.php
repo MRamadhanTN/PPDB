@@ -15,6 +15,10 @@ class CreateQnasTable extends Migration
     {
         Schema::create('qnas', function (Blueprint $table) {
             $table->id();
+            $table->string('question');
+            $table->text('answer');
+
+            $table->softDeletes();
             $table->timestamps();
         });
     }

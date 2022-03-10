@@ -15,6 +15,11 @@ class CreateAcademyYearsTable extends Migration
     {
         Schema::create('academy_years', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('stage_id');
+            $table->integer('year');
+            $table->boolean('is_active');
+
+            $table->softDeletes();
             $table->timestamps();
         });
     }

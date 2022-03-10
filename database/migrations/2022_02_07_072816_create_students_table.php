@@ -15,13 +15,14 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('student_id');
+            $table->foreignId('stage_id');
             $table->foreignId('academy_year_id');
             $table->string('name_siswa');
             $table->string('password');
-            $table->integer('nisn');
+            $table->integer('nisn')->unique();
             $table->enum('track',['reguler','prestasi','kurang mampu']);
             $table->date('birth_date');
+            $table->string('role')->default('student');
 
             $table->softDeletes();
             $table->timestamps();

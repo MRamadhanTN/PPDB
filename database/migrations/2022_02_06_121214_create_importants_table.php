@@ -15,6 +15,19 @@ class CreateImportantsTable extends Migration
     {
         Schema::create('importants', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('student_id');
+            $table->foreignId('stage_id');
+            $table->foreignId('academy_year_id');
+            $table->string('ijazah')->nullable();
+            $table->string('skhun');
+            $table->string('raport1');
+            $table->string('raport2');
+            $table->string('raport3');
+            $table->string('raport4');
+            $table->string('raport5');
+            $table->string('poor_letter')->nullable();
+
+            $table->softDeletes();
             $table->timestamps();
         });
     }

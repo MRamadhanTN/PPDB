@@ -15,9 +15,10 @@ class CreateAdminsTable extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
-            $table->email('email')->unique();
-            $table->string('password', 8);
+            $table->string('email')->unique();
+            $table->string('password');
             $table->timestamp('last_login')->nullable();
+            $table->string('role')->default('admin');
 
             $table->softDeletes();
             $table->timestamps();

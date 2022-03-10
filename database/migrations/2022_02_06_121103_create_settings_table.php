@@ -15,6 +15,10 @@ class CreateSettingsTable extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('stage_id');
+            $table->foreignId('academy_year_id');
+            $table->date('announcement');
+
             $table->timestamps();
         });
     }

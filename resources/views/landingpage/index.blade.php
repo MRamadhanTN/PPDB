@@ -77,12 +77,7 @@
                 "
             >
                 <div class="contact-info d-flex align-items-center">
-                    <i class="bi bi-envelope d-flex align-items-center"
-                        ><a
-                            href="#"
-                            class="email-address"
-                        ></a
-                    ></i>
+                    <i class="bi bi-envelope d-flex align-items-center"><span class="email-address"></span></i>
                     <i
                         class="
                             bi bi-phone
@@ -160,26 +155,26 @@
                             >
                         </li>
                         <li>
-                            <a class="nav-link scrollto" href="#stat" id="link3"
-                                >Statistik</a
+                            <a class="nav-link scrollto" href="#announce" id="link3"
+                                >Pengumuman</a
                             >
                         </li>
                         <li>
                             <a
                                 class="nav-link scrollto"
-                                href="#announce"
+                                href="#info"
                                 id="link4"
-                                >Pengumuman</a
-                            >
-                        </li>
-                        <li>
-                            <a class="nav-link scrollto" href="#info" id="link6"
                                 >Informasi</a
                             >
                         </li>
                         <li>
-                            <a class="nav-link scrollto" href="#qna" id="link5"
+                            <a class="nav-link scrollto" href="#qna" id="link6"
                                 >Q&A</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="#about" id="link5"
+                                >About Us</a
                             >
                         </li>
                     </ul>
@@ -529,98 +524,6 @@
                                                             value="{{ old('full_name') }}"
                                                         />
                                                         {{-- @error('full_name')
-                                                            <div class="invalid-feedback">
-                                                                {{ $message }}
-                                                            </div>
-                                                        @enderror --}}
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div
-                                                        class="
-                                                            mb-4
-                                                            col-lg-6 col-sm-12
-                                                        "
-                                                    >
-                                                        <label
-                                                            for="username"
-                                                            class="
-                                                                form-label
-                                                                text-white
-                                                                px-3
-                                                            "
-                                                            >Username</label
-                                                        >
-                                                        <input
-                                                            type="text"
-                                                            class="
-                                                                form-control
-                                                                form-control-lg
-                                                                rounded-pill
-                                                                {{-- @error('name') is-invalid @enderror --}}
-                                                            "
-                                                            style="
-                                                                font-size: 15px;
-                                                            "
-                                                            id="username"
-                                                            name="username"
-                                                            placeholder="Masukkan username"
-                                                            required
-                                                            {{-- @error('name') is-invalid @enderror --}}
-                                                            value="{{ old('username') }}"
-                                                        />
-                                                        {{-- @error('name')
-                                                            <div class="invalid-feedback">
-                                                                {{ $message }}
-                                                            </div>
-                                                        @enderror --}}
-                                                    </div>
-<div
-                                                        class="
-                                                            mb-4
-                                                            col-lg-6 col-sm-12
-                                                        "
-                                                        >
-                                                        <label
-                                                            for="gender"
-                                                            class="
-                                                                form-label
-                                                                text-white
-                                                                px-3
-                                                            "
-                                                            >Jenis Kelamin</label
-                                                        >
-                                                        <select
-                                                            class="
-                                                                form-select
-                                                                form-select-lg
-                                                                rounded-pill
-                                                                {{-- @error('gender') is-invalid @enderror --}}
-                                                            "
-                                                            style="
-                                                                font-size: 15px;
-                                                                color: #145560;
-                                                            "
-                                                            aria-label="gender"
-                                                            id="gender"
-                                                            name="gender"
-                                                            required
-                                                        >
-                                                            <option selected disabled>
-                                                                -- Pilih --
-                                                            </option>
-                                                            <option
-                                                                value="l"
-                                                            >
-                                                                Pria
-                                                            </option>
-                                                            <option
-                                                                value="p"
-                                                            >
-                                                                Wanita
-                                                            </option>
-                                                        </select>
-                                                        {{-- @error('gender')
                                                             <div class="invalid-feedback">
                                                                 {{ $message }}
                                                             </div>
@@ -1080,7 +983,7 @@
             <!-- End Regis Section -->
 
             <!-- ======= Statistic Section ======= -->
-            <section id="stat" class="stat">
+            {{-- <section id="stat" class="stat">
                 <div
                     class="container"
                     data-aos="fade-up"
@@ -1145,12 +1048,13 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> --}}
             <!-- End Statistic Section -->
 
             <!-- ======= Announce Section ======= -->
             <section id="announce" class="announce">
                 <div class="container"  data-aos="fade-up">
+                    <h1 class="fw-bold text-center title-announce">Pengumuman</h1>
                     <div class="row align-items-center justify-content-around">
                         <div class="col-sm-12 col-lg-5 mb-5 mb-lg-0">
                             <div
@@ -2566,7 +2470,7 @@
                 }
             }
 
-             // Show Password Checkbox
+            // Show Password Checkbox
             function showFunction() {
                 var x = document.getElementById("password");
                 var y = document.getElementById("confirm_password");

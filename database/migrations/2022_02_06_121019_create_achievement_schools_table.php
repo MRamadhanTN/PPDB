@@ -15,6 +15,11 @@ class CreateAchievementSchoolsTable extends Migration
     {
         Schema::create('achievement_schools', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('image');
+            $table->text('content');
+
+            $table->softDeletes();
             $table->timestamps();
         });
     }

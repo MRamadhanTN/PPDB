@@ -15,6 +15,12 @@ class CreateInfoSchoolsTable extends Migration
     {
         Schema::create('info_schools', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('image');
+            $table->string('video');
+            $table->text('content');
+
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class Regis
+class Role
 {
     /**
      * Handle an incoming request.
@@ -17,9 +17,10 @@ class Regis
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user() && Auth::user()->role == 'pendaftar') {
-            return $next($request);
+        if (Auth::user()->role == 'admin') {
+            return redirect()->route('admin');
+        } elseif(Auth::user()->role == 'student') {
+            return redirect()->route('landingpage');
         }
-        return redirect()->back();
     }
 }
